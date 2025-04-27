@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sentilytics Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="logo1.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="img/logo.png" alt="Sentilytics Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#team">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+  <section class="hero">
+    <div class="container">
+      <h2>Track the Mood of the News in Real-Time</h2>
+      <p>Using AI-powered sentiment analysis, see how global news trends impact emotions across regions and topics.</p>
+      <a href="#dashboard" class="btn">Explore Dashboard</a>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h3>Key Features</h3>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h4>📰 Real-time Headlines</h4>
+          <p>News headlines stream in from trusted global sources every 30 seconds.</p>
+        </div>
+        <div class="feature-card">
+          <h4>🎯 Sentiment Analysis</h4>
+          <p>AI determines tone (positive, negative, neutral) for both text and audio.</p>
+        </div>
+        <div class="feature-card">
+          <h4>📊 Visual Dashboard</h4>
+          <p>Instantly understand trends with live graphs, charts, and filters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dashboard" class="dashboard-preview">
+    <div class="container">
+      <h3>Live Sentiment Dashboard</h3>
+  
+      <!-- Swiping News Section Starts Here -->
+      <div class="carousel-wrapper">
+        <button class="arrow left" onclick="moveLeft()">‹</button>
+      
+        <div class="carousel-track">
+          <div class="carousel-card"><li><dashboard class="html"></dashboard></li></div>
+          
+          <a href="dashboard.html" class="carousel-card">English News</a>
+          <a href="dashboard.html" class="carousel-card">Hindi News</a>
+          <a href="dashboard.html" class="carousel-card">Global News</a>
+          <a href="dashboard.html" class="carousel-card">Technology News</a>
+          <a href="dashboard.html" class="carousel-card">Latest News</a>
+          <a href="dashboard.html" class="carousel-card">Old News</a>
+        </div>
+      
+        <button class="arrow right" onclick="moveRight()">›</button>
+      
+        <div class="carousel-indicators"></div> <!-- for dots -->
+      </div>
+      
+      
+      <!-- Swiping News Section Ends Here -->
+    </div>
+  </section>
+  
+  <section id="team" class="team">
+    <div class="container">
+      <h3>How It Works</h3>
+      <ul class="features-list">
+        <li>🌍 <strong>Real-Time News Collection</strong> - Stay updated with the latest news from multiple sources.</li>
+        <li>🔍 <strong>Sentiment Analysis</strong> - Get insights into the public sentiment on various topics in real time.</li>
+        <li>📊 <strong>Visualization</strong> - Watch live sentiment data on a dynamic dashboard with graphs and statistics.</li>
+        <li>🔔 <strong>Real-Time Alerts</strong> - Receive notifications about breaking news and trending topics.</li>
+      </ul>
+    </div>    
+  </section>
+  <section id="contact" class="contact">
+    <div class="container">
+        <h3>Contact Us</h3>
+        <p>Have any questions or feedback? Reach out to us!</p>
+        <form action="submit_form.php" method="POST" class="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 NewsSense. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

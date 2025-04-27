@@ -1,0 +1,127 @@
+/* 🧠 Fonts and Base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  color: #E4E6EB;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0D0F14;
+  background-image: url('img/signupbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+}
+
+/* 🌌 Container */
+.container {
+  width: 100%;
+  max-width: 450px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* 🧊 Card */
+.card {
+  background-color: rgba(26, 29, 36, 0.95); /* slight transparency for backdrop effect */
+  border: 1px solid #2D2F36;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 255, 198, 0.15);
+  backdrop-filter: blur(4px); /* optional: adds a nice frosted effect */
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 198, 0.2);
+}
+
+
+/* 🔤 Title */
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color:  #00bcd4;
+}
+
+/* 📥 Inputs */
+input[type="firstname"],
+input[type="lastname"],
+input[type="email"],
+input[type="password"],
+input[type="date"]
+ {
+  width: 85%;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  background-color: #2D2F36;
+  border: 1px solid #2D2F36;
+  border-radius: 8px;
+  color: #E4E6EB;
+  font-size: 1rem;
+  transition: border 0.2s ease;
+}
+
+input[type="radio"] {
+  margin-right: 0.5rem;
+  accent-color:  #00bcd4; /* neon teal highlight */
+}
+
+label {
+  margin-right: 1.5rem;
+  font-size: 0.95rem;
+  color: #E4E6EB;
+}
+
+input:focus {
+  outline: none;
+  border-color:  #00bcd4;
+  box-shadow: 0 0 4px  #00bcd4;
+}
+
+/* 🚀 Button */
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  background:  #00bcd4;
+  border: none;
+  border-radius: 8px;
+  color: #0D0F14;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background:  #00bcd4;
+  box-shadow: 0 0 10px  #00bcd4;
+}
+
+/* 🔗 Link Text */
+.link-text {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: #A3A9B8;
+}
+
+.link-text a {
+  color:  #00bcd4;
+  text-decoration: none;
+}
+
+.link-text a:hover {
+  text-decoration: underline;
+}

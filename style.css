@@ -1,0 +1,448 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #0e0e1a;
+    color: #f5f5f5;
+    line-height: 1.6;
+    animation: fadeIn 1s ease-in-out;
+}
+
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00e5ff;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #1a1a2e;
+    padding: 20px 0;
+    border-bottom: 1px solid #2c2c3a;
+    animation: fadeIn 2s ease-out;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    animation: slideInLeft 1s ease-out;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a {
+    font-weight: 500;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for navigation links */
+nav li a:hover {
+    color: #00e5ff;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    background: url('img/back.png') no-repeat center center/cover;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    color: #ccc;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #00bcd4;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #00e5ff;  /* Keep the hover color a lighter shade of blue */
+    color: white;  /* Change the text color to a darker shade to ensure visibility */
+    transform: scale(1.05);  /* Slightly enlarge the button */
+    box-shadow: 0 4px 12px rgba(0, 191, 212, 0.5); /* Add a stronger shadow for better visibility */
+    z-index: 1;  /* Ensure the button stays above other elements */
+}
+
+
+
+/* Features Section */
+.features {
+    background-color: #12121e;
+    padding: 60px 0;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+
+.features h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: #1e1e2f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Dashboard Preview */
+.dashboard-preview {
+    padding: 60px 0;
+    background-color: #0d0d17;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+
+.dashboard-preview h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.coming-soon {
+    font-style: italic;
+    color: #999;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Team Section */
+.team {
+    background-color: #18182a;
+    padding: 60px 0;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+
+.team h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.team-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.team-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Footer */
+footer {
+    background-color: #101018;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Style for the logo */
+.logo {
+    width: 120px;
+    height: 80px;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #1e1e2f;
+    border: 1px solid #333;
+    border-radius: 8px; /* slight curve */
+    color: #fff;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical; /* only vertical resizing allowed */
+}
+
+.header-container {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 2rem 0;
+    overflow: hidden;
+  }
+  .carousel {
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent; /* Transparent background */
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: white; /* Arrow ka color white rakha */
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .arrow:hover {
+    background: rgba(255, 255, 255, 0.1); /* Light hover effect */
+    color: #00e5ff; /* Hover pe arrow ka color blue */
+  }
+  
+  .left {
+    left: 10px;
+  }
+  
+  .right {
+    right: 10px;
+  }
+  
+  /* Hide scrollbar for carousel */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+  .news-card.active {
+    transform: scale(1.2); /* Zoom in the active (center) card */
+    z-index: 1;
+  }
+  .carousel {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    overflow-x: auto;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
+  .news-card {
+    flex: 0 0 200px;
+    height: 120px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform-origin: center center;
+  }
+  .carousel {
+    scroll-snap-type: x mandatory;
+    scroll-padding: center;
+  }
+  
+  .news-card {
+    scroll-snap-align: center;
+  }
+  .carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+  
+  .carousel-card {
+    min-width: 200px;
+    height: 120px;
+    background: linear-gradient(135deg, #00c6ff,#0099cc);
+    color: white;
+    border-radius: 10px;
+    margin: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.5s;
+  }
+  
+  .carousel-card.active {
+    transform: scale(1.2);
+    z-index: 2;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .left {
+    left: 10px;
+  }
+  
+  .right {
+    right: 10px;
+  }
+  
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .carousel-indicators div {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background: #888;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .carousel-indicators .active {
+    background: #00e5ff;
+  }
+  .carousel-card {
+  flex: 0 0 250px;
+  height: 150px;
+  background: linear-gradient(135deg, #00c6ff, #006699);
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.7; /* Make non-active cards dimmer */
+  transform: scale(0.8); /* Make non-active cards smaller */
+}
+
+.carousel-card.active {
+  transform: scale(1.2); /* Center card bigger */
+  opacity: 1; /* Fully visible */
+}
